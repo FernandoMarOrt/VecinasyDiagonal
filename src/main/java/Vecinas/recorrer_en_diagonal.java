@@ -15,17 +15,22 @@ public class recorrer_en_diagonal {
 
     public static void main(String[] args) {
 
-        int[][] diagonal = new int[3][3];
+        int[][] diagonal = new int[5][5];
 
         rellenarAleatorio(diagonal);
 
         imprimirMatriz(diagonal);
 
         System.out.println("");
+        System.out.println("Diagonal1");
 
         imprimirMatrizDiagonal1(diagonal);
 
-        //
+        System.out.println("");
+        System.out.println("Diagonal2");
+
+        imprimirMatrizDiagonal2(diagonal);
+
     }
 
     private static void rellenarAleatorio(int[][] diagonal) {
@@ -67,21 +72,17 @@ public class recorrer_en_diagonal {
 
     private static void imprimirMatrizDiagonal1(int[][] diagonal) {
 
-
         for (int i = 0; i < diagonal.length; i++) {
-            
-            
 
             for (int j = 0; j < diagonal[i].length; j++) {
 
                 System.out.print(diagonal[i][j] + " | ");
-                
-                if (i < 2) {
-                    
+
+                if (i < diagonal.length - 1) {
+
                     i++;
 
                 }
-                
 
                 System.out.println("");
 
@@ -89,25 +90,20 @@ public class recorrer_en_diagonal {
 
         }
     }
-    
-    
-     private static void imprimirMatrizDiagonal2(int[][] diagonal) {
 
+    private static void imprimirMatrizDiagonal2(int[][] diagonal) {
 
         for (int i = 0; i < diagonal.length; i++) {
-            
-            
 
-            for (int j = 0; j < diagonal[i].length; j++) {
+            for (int j = diagonal[i].length - 1; j >= 0; j--) {
 
                 System.out.print(diagonal[i][j] + " | ");
-                
-                if (i < 2) {
-                    
+
+                if (i < diagonal.length - 1) {
+
                     i++;
 
                 }
-                
 
                 System.out.println("");
 
