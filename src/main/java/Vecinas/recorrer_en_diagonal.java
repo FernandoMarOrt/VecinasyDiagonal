@@ -43,7 +43,7 @@ public class recorrer_en_diagonal {
 
             for (int j = 0; j < diagonal[i].length; j++) {
 
-                //Genero un numero aleatorio entre 0 y 20
+                //Genero un numero aleatorio entre 0 y 10
                 int nAleatorio = numeroAleatorio.nextInt(0, 10 + 1);
 
                 diagonal[i][j] = nAleatorio;
